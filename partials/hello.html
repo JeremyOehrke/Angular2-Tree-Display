@@ -1,0 +1,12 @@
+<h1>Ip Tree</h1><br/>
+
+<button (click)="fetchIpList()">Fetch List</button>
+
+<ul>
+<li *ngFor="#key of _generateKeys(ipMap); #i = index" >
+   <span (click)="toggleHide(i)">{{ key }}</span>
+   <ul>
+      <li *ngFor="#ip of ipMap[key]">{{ip}}</li>
+   </ul>
+</li>
+</ul>

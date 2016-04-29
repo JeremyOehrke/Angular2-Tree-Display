@@ -1,0 +1,9 @@
+ul.iplist
+{
+	list-style-type: disc;
+}
+
+ul
+{
+    list-style-type: none;
+}

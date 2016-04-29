@@ -1,0 +1,15 @@
+<button (click)="fetchIpList()">Fetch New List</button>
+<br />
+<br />
+<ipsearch #search (searchChange)="filterList($event)"></ipsearch>
+<br />
+<br />
+<ul [ngClass]="tree">
+	<li *ngFor="#key of generateKeys(ipMap); #i = index" >
+		<span  (click)="iplist.toggleHidden()">
+		   <span #icon class="glyphicon" [class.glyphicon-plus-sign]="iplist.getHidden()" [class.glyphicon-minus-sign]="!iplist.getHidden()"></span>
+		   {{ key }}
+	   </span>
+	   <iplist #iplist [subnetList]="ipMap[key]" ></iplist>
+	</li>
+</ul>

@@ -1,0 +1,5 @@
+This is the search box!
+
+<form #f [ngFormModel]="searchForm" (submit)="onSubmit(f)">
+	<input #search type="text" ngControl="search"/> {{errorMessage}}
+</form>

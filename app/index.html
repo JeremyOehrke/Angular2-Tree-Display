@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="//npmcdn.com/angular2@2.0.0-beta.13/bundles/angular2-polyfills.js"></script>
-	<script src="//npmcdn.com/typescript@1.8.9/lib/typescript.js"></script>
-	<script src="//npmcdn.com/systemjs@0.19.24/dist/system.src.js"></script>
-	<script src="//npmcdn.com/rxjs@5.0.0-beta.2/bundles/Rx.js"></script>
-	<script src="//npmcdn.com/angular2@2.0.0-beta.13/bundles/angular2.dev.js"></script>
+   
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="main.css">
+   
 	
-	<script>
-		System.config({
-			transpiler: 'typescript',
-			typescriptOptions: {emitDecoratorMetadata: true}
-		});
-		
-	 System.import('main.ts');
-	</script>
+	
 	
 </head>
 
 <body>
-	<ipTree></ipTree>
+	<div class="container">
+	<h1>IP Tree</h1>
+		<ipTree>
+			Loading...
+		</ipTree>
+	</div>
 </body>
 
+<script src="//npmcdn.com/angular2@2.0.0-beta.13/bundles/angular2-polyfills.js"></script>
+<script src="//npmcdn.com/typescript@1.8.9/lib/typescript.js"></script>
+<script src="//npmcdn.com/systemjs@0.19.24/dist/system.src.js"></script>
+<script src="//npmcdn.com/rxjs@5.0.0-beta.2/bundles/Rx.js"></script>
+<script src="//npmcdn.com/angular2@2.0.0-beta.13/bundles/angular2.dev.js"></script>
+
+<script>
+	System.config({
+		transpiler: 'typescript',
+		typescriptOptions: {emitDecoratorMetadata: true}
+	});
+	
+	System.import('main.ts');
+</script>
 
 </html>
